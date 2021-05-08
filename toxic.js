@@ -36,13 +36,16 @@ const addToxic = (chat, user) => {
     fs.writeFileSync('./db/chats.txt', chatsStr);
 };
 
-const searchToxic = chat => {
+const searchToxic = (chat, user) => {
     if (toxics && toxics[chat.id] && toxics[chat.id][getDate()]) {
         return toxics[chat.id][getDate()];
     }
 
 
     const users = chats[chat.id];
+    if (!users) {
+        return user.username;
+    }
     const userId = getRandom(Object.keys(users));
     const { username } =  users[userId];
 

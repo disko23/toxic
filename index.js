@@ -36,7 +36,7 @@ bot.on('message', async ctx => {
     }
 
     if (text === '/toxic') {
-        const username = await searchToxic(ctx.chat);
+        const username = await searchToxic(ctx.chat, ctx.from);
         return ctx.reply(msgs.searchToxic(username));
     }
 });
