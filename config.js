@@ -10,4 +10,7 @@ const getKey = (name, defaultValue) => {
 
 module.exports = {
     botId: getKey('BOT_ID', null),
+    storage: {
+        url: getKey('DB_URL', 'mongodb://localhost:27017'),
+    }
 };
