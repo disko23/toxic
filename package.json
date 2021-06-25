@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/disko23/toxic#readme",
   "dependencies": {
+    "mongoose": "^5.12.14",
     "telegraf": "^4.3.0"
   }
 }
